@@ -1,0 +1,120 @@
+MAP
+    NAME "onset"
+    SIZE 450 650
+    EXTENT -46.6330735347222216 -15.4471601311111115 -43.1301829158333305 -10.1812359355555557
+
+    CONFIG "MS_ERRORFILE" "/tmp/ms_error.log"
+    DEBUG 5
+
+    OUTPUTFORMAT
+      NAME "png8"
+      DRIVER AGG/PNG8
+      MIMETYPE "image/png; mode=8bit"
+      IMAGEMODE RGB
+      EXTENSION "png"
+    END
+
+
+    WEB
+    IMAGEPATH "/tmp/"
+	IMAGEURL "/tmp/"
+        METADATA
+            "wms_title" "Landuse"
+            "wms_legend" "http://obahia.dea.ufv.br:8085"
+            "wms_onlineresource" "http://obahia.dea.ufv.br:8085/cgi-bin/mapserv.fcgi?"
+            "wms_enable_request" "*"
+            "wms_feature_info_mime_type" "text/html"
+            "wms_include_items" "all"
+        END
+    END
+
+
+    PROJECTION
+        "proj=longlat"
+        "datum=WGS84"
+        "no_defs"
+    END
+
+    LEGEND
+      STATUS on
+      KEYSIZE 20 12
+      KEYSPACING 6 6 
+      LABEL
+        TYPE TRUETYPE
+      #  FONT 'Roboto'
+        SIZE 9
+        COLOR 0 0 89
+        OUTLINECOLOR 255 255 255
+        ANTIALIAS false
+      END
+      # TEMPLATE "landuseLegend.html"
+    END
+
+    LAYER
+        NAME onset
+        STATUS DEFAULT
+        TYPE POLYGON
+        DUMP TRUE
+
+        VALIDATION
+	        "ws" "^[a-zA-Z\-]+$"	
+        END
+
+	INCLUDE "includes/dbconfig.map"
+        DATA "geom from (
+            SELECT 
+            onsetrain.fid, onsetrain.onset, ST_Intersection(gcc.geom,onsetrain.geom) AS geom
+            FROM vector.gcc, vector.onsetrain
+            WHERE  ST_Intersects(gcc.geom,onsetrain.geom) AND gcc.name = UPPER('%ws%')                                           
+        ) as subquery USING UNIQUE fid USING SRID=4326"
+
+
+        PROCESSING "CLOSE_CONNECTION=DEFER"
+
+        CLASSITEM "onset"
+        CLASS
+          NAME "14/10 - 29/10"
+          EXPRESSION ([onset] >= 135 AND [onset] < 120 )
+          STYLE
+            COLOR 247 251 255
+          END
+        END
+        CLASS
+          NAME "29/10 - 13/11"
+          EXPRESSION ([onset] >= 120 AND [onset] < 135 )
+          STYLE
+            COLOR 209 227 243
+          END
+        END
+        CLASS
+          NAME "13/11 - 28/11"
+          EXPRESSION ([onset] >= 135 AND [onset] < 150 )
+          STYLE
+            COLOR 154 200 225
+          END
+        END
+        CLASS
+          NAME "28/11 - 13/12"
+          EXPRESSION ([onset] >= 150 AND [onset] < 165 )
+          STYLE
+            COLOR 82 157 204
+          END
+        END
+        CLASS
+          NAME "13/12 - 28/12"
+          EXPRESSION ([onset] >= 165 AND [onset] < 180 )
+          STYLE
+            COLOR 28 108 177
+          END
+        END
+        CLASS
+          NAME "28/12 - 12/01"
+          EXPRESSION ([onset] >= 180 AND [onset] < 195 )
+          STYLE
+     
+            COLOR 8 48 107
+          END
+        END
+
+    END
+END

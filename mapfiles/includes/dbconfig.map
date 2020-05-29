@@ -1,2 +1,2 @@
 CONNECTIONTYPE postgis
-CONNECTION "host=localhost dbname=obahia user=geonode password=uppQAOFa port=5432"
+CONNECTION "host=obahia.dea.ufv.br dbname=obahia user=user password=password port=5432"

@@ -39,6 +39,8 @@ MAP
         DUMP TRUE
         TOLERANCE 80
 
+        TEMPLATE "templates/dataCoordinate.html"
+
         VALIDATION
             "ws" "^[a-zA-Z\-]+$"
 	    "year" "[0-9]+"
