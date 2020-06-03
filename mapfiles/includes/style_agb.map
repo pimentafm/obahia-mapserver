@@ -1,0 +1,85 @@
+CLASSITEM "[pixel]"
+    CLASS
+        NAME "0 - 3 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] >= 0 and [pixel] <= 3)
+        STYLE
+            COLORRANGE 255 245 255 238 245 211
+            DATARANGE 0 3
+        END
+    END
+    CLASS
+        NAME "> 3 - 6 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 3 and [pixel] <= 6)
+        STYLE
+            COLORRANGE 238 245 211 189 215 108
+            DATARANGE 3 6
+        END
+    END
+    CLASS
+        NAME "> 6 - 9 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 6 and [pixel] <= 9)
+        STYLE
+            COLORRANGE 189 215 108 148 190 49
+            DATARANGE 6 9
+        END
+    END
+    CLASS
+        NAME "> 9 - 12 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 9 and [pixel] <= 12)
+        STYLE
+            COLORRANGE 148 190 49 79 123 27
+            DATARANGE 9 12
+        END
+    END
+    CLASS
+        NAME "> 12 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 12)
+        STYLE
+            COLORRANGE 79 123 27 2 61 2
+            DATARANGE 12 15
+        END
+    END
+END
+
+#CLASSITEM "[pixel]"
+#    CLASS
+#        NAME "Formações florestais"
+#        EXPRESSION ( [pixel] >= 1 AND [pixel] < 3)
+#        STYLE
+#            OPACITY 100
+#            COLOR 238 245 211
+#        END
+#    END
+#    CLASS
+#        NAME "Formações savânicas"
+#        EXPRESSION ( [pixel] >= 3 AND [pixel] < 6)
+#        STYLE
+#            OPACITY 100
+#            COLOR 208 226 131
+#        END
+#    END
+#    CLASS
+#        NAME "Formações campestres"
+#        EXPRESSION ( [pixel] >= 6 AND [pixel] < 9)
+#        STYLE
+#            OPACITY 100
+#            COLOR 151 180 51
+#        END
+#    END
+#    CLASS
+#        NAME "Mosaico de agricultura ou pastagem"
+#        EXPRESSION ( [pixel] >= 9 AND [pixel] < 12)
+#        STYLE
+#            OPACITY 100
+#            COLOR 76 121 26
+#        END
+#    END
+#    CLASS
+#        NAME "Agricultura de sequeiro"
+#        EXPRESSION ( [pixel] >= 12)
+#        STYLE
+#            OPACITY 100
+#            COLOR 2 61 2
+#        END
+#    END
+#    END
