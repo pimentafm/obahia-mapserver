@@ -27,7 +27,7 @@ MAP
     STATUS default
     TYPE raster
     DUMP true
-    TOLERANCE 80
+    TOLERANCE 0
     DATA "dem.tif"
     PROCESSING "SCALE=400,1000"
     PROCESSING "SCALE_BUCKETS=40"

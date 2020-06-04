@@ -42,7 +42,7 @@ MAP
         STATUS DEFAULT
         TYPE RASTER
         DUMP TRUE
-        TOLERANCE 80
+        TOLERANCE 0
 
         VALIDATION
         "ws" "^[a-zA-Z\-]+$"
