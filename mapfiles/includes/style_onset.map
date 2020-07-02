@@ -1,44 +1,44 @@
 CLASSITEM "onset"
     CLASS
-      NAME "29/10 - 13/11"
+      NAME "<= 30/09"
       EXPRESSION ([onset] = 105 )
       STYLE
-        COLOR 247 251 255
+        COLOR 0 0 255
       END
     END
     CLASS
-      NAME "13/11 - 28/11"
+      NAME "01/10 - 15/10"
       EXPRESSION ([onset] = 120 )
       STYLE
-        COLOR 209 227 243
+        COLOR 0 153 255
       END
     END
     CLASS
-      NAME "28/11 - 13/12"
+      NAME "16/10 - 31/10"
       EXPRESSION ([onset] = 135)
       STYLE
-        COLOR 154 200 225
+        COLOR 51 255 204
       END
     END
     CLASS
-      NAME "13/12 - 28/12"
+      NAME "01/11 - 15/11"
       EXPRESSION ([onset] = 150 )
       STYLE
-        COLOR 82 157 204
+        COLOR 204 255 51
       END
     END
     CLASS
-      NAME "28/12 - 01/12"
+      NAME "16/11 - 30/11"
       EXPRESSION ([onset] = 165 )
       STYLE
-        COLOR 28 108 177
+        COLOR 255 153 0
       END
     END
     CLASS
-      NAME "01/12 - 27/01"
+      NAME ">= 01/12"
       EXPRESSION ([onset] >= 180 )
       STYLE
-        COLOR 8 48 107
+        COLOR 255 0 0
       END
     END
-    
+
