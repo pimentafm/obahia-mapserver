@@ -37,7 +37,7 @@ MAP
         STATUS DEFAULT
         TYPE RASTER
         DUMP TRUE
-        TOLERANCE 0
+        TOLERANCE 80
 
         TEMPLATE "templates/dataCoordinate.html"
 
@@ -46,7 +46,7 @@ MAP
 	    "code" "[0-9]+"
         END
 
-        DATA "../landuse/drainage/%year%/landuse_%code%.tif"
+        DATA "../database/landuse/drainage/%year%/landuse_%code%.tif"
 
         INCLUDE "includes/style_landuse.map"
     END

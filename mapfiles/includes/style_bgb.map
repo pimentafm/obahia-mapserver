@@ -1,0 +1,42 @@
+CLASSITEM "[pixel]"
+    CLASS
+        NAME "0 - 5 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] >= 0 and [pixel] <= 5)
+        STYLE
+            COLORRANGE 255 250 245 255 245 235
+            DATARANGE 0 5
+        END
+    END
+    CLASS
+        NAME "> 5 - 10 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 5 and [pixel] <= 10)
+        STYLE
+            COLORRANGE 255 245 235 254 210 166
+            DATARANGE 5 10
+        END
+    END
+    CLASS
+        NAME "> 10 - 15 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 10 and [pixel] <= 15)
+        STYLE
+            COLORRANGE 254 210 166 253 146 67
+            DATARANGE 10 15
+        END
+    END
+    CLASS
+        NAME "> 15 - 20 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 15 and [pixel] <= 20)
+        STYLE
+            COLORRANGE 253 146 67 223 79 5
+            DATARANGE 15 20
+        END
+    END
+    CLASS
+        NAME "> 20 tC ha<sup>-1</sup>"
+        EXPRESSION ([pixel] > 20)
+        STYLE
+            COLORRANGE 223 79 5 127 39 4
+            DATARANGE 20 30
+        END
+    END
+END

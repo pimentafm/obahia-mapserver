@@ -46,7 +46,7 @@ MAP
 	    "year" "[0-9]+"
         END
 
-        DATA "../landuse/gcc/%ws%/landuse%year%.tif"
+        DATA "../database/landuse/gcc/%ws%/landuse%year%.tif"
 
         INCLUDE "includes/style_landuse.map"
     END

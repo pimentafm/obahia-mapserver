@@ -46,7 +46,7 @@ MAP
 	    "code" "[0-9]+"
         END
 
-        DATA "../landuse/counties/landuse_%code%_%year%.tif"
+        DATA "../database/landuse/counties/landuse_%code%_%year%.tif"
 
         INCLUDE "includes/style_landuse.map"
     END
