@@ -1,5 +1,5 @@
 CLASS
-  NAME "Bacia hidrográfica"
+  NAME "Municípios"
   LABEL
     COLOR 0 0 0
     FONT Roboto
@@ -14,7 +14,7 @@ CLASS
     OUTLINECOLOR 255 255 255
   END
   STYLE
-    OUTLINECOLOR "#000000"
+    OUTLINECOLOR "#696969"
     ANTIALIAS TRUE
     WIDTH 1
   END

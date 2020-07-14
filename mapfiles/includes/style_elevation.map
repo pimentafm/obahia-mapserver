@@ -1,0 +1,91 @@
+CLASSITEM "elev"
+    CLASS
+      NAME "500 - 700 m"
+      EXPRESSION ( ([elev] >= 500.0) AND ([elev] <= 700.0) )
+      STYLE
+        OUTLINECOLOR "#00bfbf"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#00bfbf"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "700 - 750 m"
+      EXPRESSION ( ([elev] >= 700.0) AND ([elev] <= 750.0) )
+      STYLE
+        OUTLINECOLOR "#00f51f"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#00f51f"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "750 - 800 m"
+      EXPRESSION ( ([elev] >= 750.0) AND ([elev] <= 800.0) )
+      STYLE
+        OUTLINECOLOR "#aaff00"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#aaff00"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "800 - 850 m"
+      EXPRESSION ( ([elev] >= 800.0) AND ([elev] <= 850.0) )
+      STYLE
+        OUTLINECOLOR "#ffbf00"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#ffbf00"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "850 - 900 m"
+      EXPRESSION ( ([elev] >= 850.0) AND ([elev] <= 900.0) )
+      STYLE
+        OUTLINECOLOR "#ea7f15"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#ea7f15"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "900 -950 m"
+      EXPRESSION ( ([elev] >= 900.0) AND ([elev] <= 950.0) )
+      STYLE
+        OUTLINECOLOR "#a36d38"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#a36d38"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "> 950 m"
+      EXPRESSION ( ([elev] >= 700.0) AND ([elev] <= 750.0) )
+      STYLE
+        OUTLINECOLOR "#141414"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#141414"
+        ANTIALIAS TRUE
+      END
+    END

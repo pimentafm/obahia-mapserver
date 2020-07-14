@@ -1,7 +1,7 @@
 MAP
-    NAME "hidrografia"
+    NAME "altogrande"
     SIZE 450 650
-    EXTENT -46.6330735347222216 -15.4471601311111115 -43.1301829158333305 -10.1812359355555557
+    EXTENT 317967.4894924099789932 8515721.4269095007330179 657296.1769924099789932 8767076.4269095007330179
 
    # DEBUG 5
    # CONFIG "MS_ERRORFILE" "/tmp/ms_error.log"
@@ -20,7 +20,7 @@ MAP
         IMAGEPATH "/tmp/"
         IMAGEURL "/tmp/"
         METADATA
-            "wms_title" "Hidrografia"
+            "wms_title" "Alto Grande"
             "wms_legend" "http://obahia.dea.ufv.br:8085"
             "wms_onlineresource" "http://obahia.dea.ufv.br:8085/cgi-bin/mapserv.fcgi?"
             "wms_enable_request" "*"
@@ -47,31 +47,25 @@ MAP
         OUTLINECOLOR 255 255 255
         ANTIALIAS false
       END
-      # TEMPLATE "landuseLegend.html"
+#      TEMPLATE "landuseLegend.html"
     END
 
     LAYER
-        NAME hidrografia
+        NAME altogrande
         STATUS DEFAULT
-        TYPE LINE
+        TYPE POLYGON
         DUMP TRUE
-
-        LABELITEM "name"
-        LABELCACHE ON
-        PROCESSING "LABEL_NO_CLIP=True"
 
         INCLUDE "includes/dbconfig.map"
         DATA "geom FROM (
           SELECT
-          hidro.fid, hidro.name, hidro.geom
+          altogrande.node, altogrande.elev, altogrande.geom
           FROM
-            vector.hidrography AS hidro) as subquery USING UNIQUE fid USING SRID=4326"
-
-#        DATA "geom from vector.hidrography USING UNIQUE fid USING SRID=4326"
+            modflow.altogrande AS altogrande) as subquery USING UNIQUE node USING SRID=31986"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 
-        INCLUDE "includes/style_hidrography.map"
+       INCLUDE "includes/style_elevation.map"
     END
 END
 
