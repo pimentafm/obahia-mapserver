@@ -1,0 +1,117 @@
+CLASSITEM "thickn"
+    CLASS
+      NAME "30 - 50 m"
+      EXPRESSION ( ([thickn] >= 30.0) AND ([thickn] <= 50.0) )
+      STYLE
+        OUTLINECOLOR "#00bfbf"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#00bfbf"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "50 - 100 m"
+      EXPRESSION ( ([thickn] > 50.0) AND ([thickn] <= 100.0) )
+      STYLE
+        OUTLINECOLOR "#00f51f"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#00f51f"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "100 - 150 m"
+      EXPRESSION ( ([thickn] > 100.0) AND ([thickn] <= 150.0) )
+      STYLE
+        OUTLINECOLOR "#aaff00"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#aaff00"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "150 - 200 m"
+      EXPRESSION ( ([thickn] > 150.0) AND ([thickn] <= 200.0) )
+      STYLE
+        OUTLINECOLOR "#ffbf00"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#ffbf00"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "200 - 250 m"
+      EXPRESSION ( ([thickn] > 200.0) AND ([thickn] <= 250.0) )
+      STYLE
+        OUTLINECOLOR "#ea7f15"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#ea7f15"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "250 - 300 m"
+      EXPRESSION ( ([thickn] > 250.0) AND ([thickn] <= 300.0) )
+      STYLE
+        OUTLINECOLOR "#8a522d"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#8a522d"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "300 - 350 m"
+      EXPRESSION ( ([thickn] > 300.0) AND ([thickn] <= 350.0) )
+      STYLE
+        OUTLINECOLOR "#4b2f1a"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#4b2f1a"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "350 - 400 m"
+      EXPRESSION ( ([thickn] > 350.0) AND ([thickn] <= 400.0) )
+      STYLE
+        OUTLINECOLOR "#2e1d10"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#2e1d10"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME " > 400 m"
+      EXPRESSION ( ([thickn] > 400.0) AND ([thickn] <= 750.0) )
+      STYLE
+        OUTLINECOLOR "#141414"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#141414"
+        ANTIALIAS TRUE
+      END
+    END

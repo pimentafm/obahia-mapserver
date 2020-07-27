@@ -55,6 +55,10 @@ MAP
         STATUS DEFAULT
         TYPE LINE
 
+        LABELITEM "name"
+        LABELCACHE ON
+        PROCESSING "LABEL_NO_CLIP=True"
+
         VALIDATION
           "ws" "^[a-zA-Z\-]+$"
           "default_ws" "grande"

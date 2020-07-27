@@ -55,6 +55,11 @@ MAP
         TYPE LINE
         DUMP TRUE
 
+        LABELITEM "code"
+        LABELCACHE ON
+        PROCESSING "LABEL_NO_CLIP=True"
+
+
         INCLUDE "includes/dbconfig.map"
         DATA "geom from vector.highways USING UNIQUE id USING SRID=4326"
 

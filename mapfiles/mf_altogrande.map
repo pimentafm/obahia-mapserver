@@ -51,7 +51,7 @@ MAP
     END
 
     LAYER
-        NAME altogrande
+        NAME elevacao
         STATUS DEFAULT
         TYPE POLYGON
         DUMP TRUE
@@ -66,6 +66,24 @@ MAP
         PROCESSING "CLOSE_CONNECTION=DEFER"
 
        INCLUDE "includes/style_elevation.map"
+    END
+    
+    LAYER
+        NAME espessura
+        STATUS OFF
+        TYPE POLYGON
+        DUMP TRUE
+
+        INCLUDE "includes/dbconfig.map"
+        DATA "geom FROM (
+          SELECT
+          altogrande.node, altogrande.thickn, altogrande.geom
+          FROM
+            modflow.altogrande AS altogrande) as subquery USING UNIQUE node USING SRID=31986"
+
+        PROCESSING "CLOSE_CONNECTION=DEFER"
+
+        INCLUDE "includes/style_thickness.map"
     END
 END
 

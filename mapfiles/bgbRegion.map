@@ -56,7 +56,7 @@ MAP
         TOLERANCE 0
         TOLERANCEUNITS pixels
 
-        TEMPLATE "templates/dataCoordinate.html"
+        TEMPLATE "templates/dataCoordinate_biomass.html"
 
         VALIDATION
 	   "year" "[0-9]+"

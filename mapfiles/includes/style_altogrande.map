@@ -1,0 +1,14 @@
+CLASS
+  NAME "Elevação"
+  STYLE
+    OUTLINECOLOR "#00000000"
+    ANTIALIAS TRUE
+    WIDTH 0
+  END
+  STYLE
+    COLOR "#ff0000"
+    ANTIALIAS TRUE
+    WIDTH 2
+  END
+END
+    

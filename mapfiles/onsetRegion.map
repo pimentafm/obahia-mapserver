@@ -59,15 +59,17 @@ MAP
         TEMPLATE "templates/dataCoordinate_onset.html"
  
         INCLUDE "includes/dbconfig.map"
-        DATA "geom from (
-          SELECT
-          onset_forecast.fid, onset_forecast.onset, onset_forecast.date, onset_forecast.mae_median, ST_Intersection(onset_forecast.geom, gcc.geom) AS geom
-          FROM vector.onset_forecast, vector.gcc
-          WHERE ST_Intersects(gcc.geom, onset_forecast.geom)
-        ) AS subquery USING UNIQUE fid USING SRID=4326"
+        DATA "geom from vector.onset_forecast"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 
         INCLUDE "includes/style_onset.map"
     END
 END
+
+#        DATA "geom from (
+#          SELECT
+#          onset_forecast.fid, onset_forecast.onset, onset_forecast.date, onset_forecast.mae_median, ST_Intersection(onset_forecast.geom, gcc.geom) AS geom
+#          FROM vector.onset_forecast, vector.gcc
+#          WHERE ST_Intersects(gcc.geom, onset_forecast.geom)
+#        ) AS subquery USING UNIQUE fid USING SRID=4326"

@@ -55,6 +55,10 @@ MAP
         TYPE LINE
         DUMP TRUE
 
+        LABELITEM "name"
+        LABELCACHE ON
+        PROCESSING "LABEL_NO_CLIP=True"
+
         VALIDATION
             "code" "[0-9]+"
         END
