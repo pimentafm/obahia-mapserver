@@ -1,0 +1,117 @@
+CLASSITEM "head"
+    CLASS
+      NAME "500 - 550 m"
+      EXPRESSION ( ([head] >= 500.0) AND ([head] <= 550.0) )
+      STYLE
+        OUTLINECOLOR "#f7fbff"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#f7fbff"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "550 - 600 m"
+      EXPRESSION ( ([head] >= 550.0) AND ([head] <= 600.0) )
+      STYLE
+        OUTLINECOLOR "#deebf7"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#deebf7"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "600 - 650 m"
+      EXPRESSION ( ([head] >= 600.0) AND ([head] <= 650.0) )
+      STYLE
+        OUTLINECOLOR "#c6dbef"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#c6dbef"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "650 - 700 m"
+      EXPRESSION ( ([head] >= 650.0) AND ([head] <= 700.0) )
+      STYLE
+        OUTLINECOLOR "#9ecae1"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#9ecae1"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "700 - 750 m"
+      EXPRESSION ( ([head] >= 700.0) AND ([head] <= 750.0) )
+      STYLE
+        OUTLINECOLOR "#6baed6"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#6baed6"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "750 - 800 m"
+      EXPRESSION ( ([head] >= 750.0) AND ([head] <= 800.0) )
+      STYLE
+        OUTLINECOLOR "#4292c6"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#4292c6"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "800 - 850 m"
+      EXPRESSION ( ([head] >= 800.0) AND ([head] <= 850.0) )
+      STYLE
+        OUTLINECOLOR "#2171b5"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#2171b5"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "900 - 950 m"
+      EXPRESSION ( ([head] >= 900.0) AND ([head] <= 950.0) )
+      STYLE
+        OUTLINECOLOR "#08519c"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#08519c"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "> 950 m"
+      EXPRESSION ([head] >= 95.0)
+      STYLE
+        OUTLINECOLOR "#08306b"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#08306b"
+        ANTIALIAS TRUE
+      END
+    END

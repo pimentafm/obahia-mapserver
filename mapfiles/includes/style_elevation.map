@@ -79,7 +79,7 @@ CLASSITEM "elev"
 
     CLASS
       NAME "> 950 m"
-      EXPRESSION ( ([elev] >= 700.0) AND ([elev] <= 750.0) )
+      EXPRESSION ( ([elev] >= 700.0) AND ([elev] <= 1000.0) )
       STYLE
         OUTLINECOLOR "#141414"
         ANTIALIAS TRUE

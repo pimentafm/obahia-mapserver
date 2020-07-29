@@ -3,115 +3,115 @@ CLASSITEM "thickn"
       NAME "30 - 50 m"
       EXPRESSION ( ([thickn] >= 30.0) AND ([thickn] <= 50.0) )
       STYLE
-        OUTLINECOLOR "#00bfbf"
+        OUTLINECOLOR "#fde725"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#00bfbf"
+        COLOR "#fde725"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
       NAME "50 - 100 m"
-      EXPRESSION ( ([thickn] > 50.0) AND ([thickn] <= 100.0) )
+      EXPRESSION ( ([thickn] >= 50.0) AND ([thickn] <= 100.0) )
       STYLE
-        OUTLINECOLOR "#00f51f"
+        OUTLINECOLOR "#abdc32"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#00f51f"
+        COLOR "#abdc32"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
       NAME "100 - 150 m"
-      EXPRESSION ( ([thickn] > 100.0) AND ([thickn] <= 150.0) )
+      EXPRESSION ( ([thickn] >= 100.0) AND ([thickn] <= 150.0) )
       STYLE
-        OUTLINECOLOR "#aaff00"
+        OUTLINECOLOR "#5dc963"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#aaff00"
+        COLOR "#5dc963"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
       NAME "150 - 200 m"
-      EXPRESSION ( ([thickn] > 150.0) AND ([thickn] <= 200.0) )
+      EXPRESSION ( ([thickn] >= 150.0) AND ([thickn] <= 200.0) )
       STYLE
-        OUTLINECOLOR "#ffbf00"
+        OUTLINECOLOR "#28ae80"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#ffbf00"
+        COLOR "#28ae80"
         ANTIALIAS TRUE
       END
     END
     
     CLASS
       NAME "200 - 250 m"
-      EXPRESSION ( ([thickn] > 200.0) AND ([thickn] <= 250.0) )
+      EXPRESSION ( ([thickn] >= 200.0) AND ([thickn] <= 250.0) )
       STYLE
-        OUTLINECOLOR "#ea7f15"
+        OUTLINECOLOR "#21908d"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#ea7f15"
+        COLOR "#21908d"
         ANTIALIAS TRUE
       END
     END
     
     CLASS
-      NAME "250 - 300 m"
-      EXPRESSION ( ([thickn] > 250.0) AND ([thickn] <= 300.0) )
+      NAME "250 -300 m"
+      EXPRESSION ( ([thickn] >= 250.0) AND ([thickn] <= 300.0) )
       STYLE
-        OUTLINECOLOR "#8a522d"
+        OUTLINECOLOR "#2c728e"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#8a522d"
+        COLOR "#2c728e"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "300 - 350 m"
-      EXPRESSION ( ([thickn] > 300.0) AND ([thickn] <= 350.0) )
+      NAME "> 300 - 350 m"
+      EXPRESSION ( ([thickn] >= 300.0) AND ([thickn] <= 350.0) )
       STYLE
-        OUTLINECOLOR "#4b2f1a"
+        OUTLINECOLOR "#3b528b"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#4b2f1a"
-        ANTIALIAS TRUE
-      END
-    END
-    
-    CLASS
-      NAME "350 - 400 m"
-      EXPRESSION ( ([thickn] > 350.0) AND ([thickn] <= 400.0) )
-      STYLE
-        OUTLINECOLOR "#2e1d10"
-        ANTIALIAS TRUE
-      END
-      STYLE
-        COLOR "#2e1d10"
+        COLOR "#3b528b"
         ANTIALIAS TRUE
       END
     END
     
     CLASS
-      NAME " > 400 m"
-      EXPRESSION ( ([thickn] > 400.0) AND ([thickn] <= 750.0) )
+      NAME "> 350 - 400 m"
+      EXPRESSION ( ([thickn] >= 350.0) AND ([thickn] <= 400.0) )
       STYLE
-        OUTLINECOLOR "#141414"
+        OUTLINECOLOR "#472c7c"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#141414"
+        COLOR "#472c7c"
+        ANTIALIAS TRUE
+      END
+    END
+    
+    CLASS
+      NAME "> 400 m"
+      EXPRESSION ([thickn] >= 400.0)
+      STYLE
+        OUTLINECOLOR "#440154"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#440154"
         ANTIALIAS TRUE
       END
     END

@@ -4,7 +4,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] = 1 )
       STYLE
         COLOR 0 0 255
-        OPACITY 60
       END
     END
     CLASS
@@ -12,7 +11,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] = 2 )
       STYLE
         COLOR 0 153 255
-        OPACITY 60
       END
     END
     CLASS
@@ -20,7 +18,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] = 3)
       STYLE
         COLOR 51 255 204
-        OPACITY 60
       END
     END
     CLASS
@@ -28,7 +25,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] = 4 )
       STYLE
         COLOR 204 255 51
-        OPACITY 60
       END
     END
     CLASS
@@ -36,7 +32,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] = 5 )
       STYLE
         COLOR 255 153 0
-        OPACITY 60
       END
     END
     CLASS
@@ -44,7 +39,6 @@ CLASSITEM "onset"
       EXPRESSION ([onset] >= 6 )
       STYLE
         COLOR 255 0 0
-        OPACITY 60
       END
     END
     
