@@ -63,7 +63,7 @@ MAP
             "code" "[0-9]+"
         END
 
-        DATA "../database/biomass/drainage/SOC_%code%_%year%.tif"
+        DATA "../database/biomass/drainage/%code%/SOC_%code%_%year%.tif"
 
         INCLUDE "includes/style_soc.map"
     END

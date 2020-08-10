@@ -1,44 +1,65 @@
 CLASSITEM "onset"
     CLASS
-      NAME "até 30/09"
+      NAME "< 15/09"
       EXPRESSION ([onset] = 1 )
       STYLE
-        COLOR 0 0 255
+        COLOR "#31007e"
       END
     END
     CLASS
-      NAME "01/10 - 15/10"
+      NAME "15/09 - 30/09"
       EXPRESSION ([onset] = 2 )
       STYLE
-        COLOR 0 153 255
+        COLOR "#0032b3"
       END
     END
     CLASS
-      NAME "16/10 - 31/10"
+      NAME "30/09 - 15/10"
       EXPRESSION ([onset] = 3)
       STYLE
-        COLOR 51 255 204
+        COLOR "#00bdff"
       END
     END
     CLASS
-      NAME "01/11 - 15/11"
+      NAME "15/10 - 30/10"
       EXPRESSION ([onset] = 4 )
       STYLE
-        COLOR 204 255 51
+        COLOR "#2aa92a"
       END
     END
     CLASS
-      NAME "16/11 - 30/11"
+      NAME "30/10 - 15/11"
       EXPRESSION ([onset] = 5 )
       STYLE
-        COLOR 255 153 0
+        COLOR "#53ff00"
       END
     END
     CLASS
-      NAME "após 01/12"
-      EXPRESSION ([onset] >= 6 )
+      NAME "15/11 - 30/11"
+      EXPRESSION ([onset] = 6 )
       STYLE
-        COLOR 255 0 0
+        COLOR "#ffff00"
+      END
+    END
+    CLASS
+      NAME "30/11 - 15/12"
+      EXPRESSION ([onset] = 7 )
+      STYLE
+        COLOR "#ff6500"
+      END
+    END
+    CLASS
+      NAME "15/12 - 30/12"
+      EXPRESSION ([onset] = 8 )
+      STYLE
+        COLOR "#ff007f"
+      END
+    END
+    CLASS
+      NAME "> 30/12"
+      EXPRESSION ([onset] = 9 )
+      STYLE
+        COLOR "#ff86c2"
       END
     END
     

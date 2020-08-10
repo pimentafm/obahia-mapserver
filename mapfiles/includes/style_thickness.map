@@ -1,7 +1,7 @@
-CLASSITEM "thickn"
+CLASSITEM "thickness"
     CLASS
       NAME "30 - 50 m"
-      EXPRESSION ( ([thickn] >= 30.0) AND ([thickn] <= 50.0) )
+      EXPRESSION ( ([thickness] >= 30.0) AND ([thickness] <= 50.0) )
       STYLE
         OUTLINECOLOR "#fde725"
         ANTIALIAS TRUE
@@ -14,7 +14,7 @@ CLASSITEM "thickn"
 
     CLASS
       NAME "50 - 100 m"
-      EXPRESSION ( ([thickn] >= 50.0) AND ([thickn] <= 100.0) )
+      EXPRESSION ( ([thickness] >= 50.0) AND ([thickness] <= 100.0) )
       STYLE
         OUTLINECOLOR "#abdc32"
         ANTIALIAS TRUE
@@ -27,7 +27,7 @@ CLASSITEM "thickn"
 
     CLASS
       NAME "100 - 150 m"
-      EXPRESSION ( ([thickn] >= 100.0) AND ([thickn] <= 150.0) )
+      EXPRESSION ( ([thickness] >= 100.0) AND ([thickness] <= 150.0) )
       STYLE
         OUTLINECOLOR "#5dc963"
         ANTIALIAS TRUE
@@ -40,7 +40,7 @@ CLASSITEM "thickn"
 
     CLASS
       NAME "150 - 200 m"
-      EXPRESSION ( ([thickn] >= 150.0) AND ([thickn] <= 200.0) )
+      EXPRESSION ( ([thickness] >= 150.0) AND ([thickness] <= 200.0) )
       STYLE
         OUTLINECOLOR "#28ae80"
         ANTIALIAS TRUE
@@ -53,7 +53,7 @@ CLASSITEM "thickn"
     
     CLASS
       NAME "200 - 250 m"
-      EXPRESSION ( ([thickn] >= 200.0) AND ([thickn] <= 250.0) )
+      EXPRESSION ( ([thickness] >= 200.0) AND ([thickness] <= 250.0) )
       STYLE
         OUTLINECOLOR "#21908d"
         ANTIALIAS TRUE
@@ -66,7 +66,7 @@ CLASSITEM "thickn"
     
     CLASS
       NAME "250 -300 m"
-      EXPRESSION ( ([thickn] >= 250.0) AND ([thickn] <= 300.0) )
+      EXPRESSION ( ([thickness] >= 250.0) AND ([thickness] <= 300.0) )
       STYLE
         OUTLINECOLOR "#2c728e"
         ANTIALIAS TRUE
@@ -79,7 +79,7 @@ CLASSITEM "thickn"
 
     CLASS
       NAME "> 300 - 350 m"
-      EXPRESSION ( ([thickn] >= 300.0) AND ([thickn] <= 350.0) )
+      EXPRESSION ( ([thickness] >= 300.0) AND ([thickness] <= 350.0) )
       STYLE
         OUTLINECOLOR "#3b528b"
         ANTIALIAS TRUE
@@ -92,7 +92,7 @@ CLASSITEM "thickn"
     
     CLASS
       NAME "> 350 - 400 m"
-      EXPRESSION ( ([thickn] >= 350.0) AND ([thickn] <= 400.0) )
+      EXPRESSION ( ([thickness] >= 350.0) AND ([thickness] <= 400.0) )
       STYLE
         OUTLINECOLOR "#472c7c"
         ANTIALIAS TRUE
@@ -105,7 +105,7 @@ CLASSITEM "thickn"
     
     CLASS
       NAME "> 400 m"
-      EXPRESSION ([thickn] >= 400.0)
+      EXPRESSION ([thickness] >= 400.0)
       STYLE
         OUTLINECOLOR "#440154"
         ANTIALIAS TRUE

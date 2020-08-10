@@ -14,6 +14,7 @@ MAP
       MIMETYPE "image/png; mode=8bit"
       IMAGEMODE RGBA
       EXTENSION "png"
+      TRANSPARENT ON
     END
 
     WEB

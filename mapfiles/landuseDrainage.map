@@ -46,7 +46,7 @@ MAP
 	    "code" "[0-9]+"
         END
 
-        DATA "../database/landuse/drainage/%year%/landuse_%code%.tif"
+        DATA "../database/landuse/drainage/%code%/landuse_%code%_%year%.tif"
 
         INCLUDE "includes/style_landuse.map"
     END

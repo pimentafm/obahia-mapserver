@@ -10,6 +10,8 @@ MAP
       DRIVER AGG/PNG8
       MIMETYPE "image/png; mode=8bit"
       IMAGEMODE RGBA
+      TRANSPARENT on
+      FORMATOPTION "TRANSPARENT_FORMAT=png8"
       EXTENSION "png"
     END
 
@@ -58,7 +60,7 @@ MAP
         INCLUDE "includes/dbconfig.map"
         DATA "geom FROM (
           SELECT
-          altogrande.node, altogrande.elev, altogrande.geom
+          altogrande.node, altogrande.elevation, altogrande.geom
           FROM
             modflow.altogrande AS altogrande) as subquery USING UNIQUE node USING SRID=31986"
 

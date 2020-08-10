@@ -63,7 +63,7 @@ MAP
             "code" "[0-9]+"
         END
 
-        DATA "../database/biomass/drainage/AGB_%code%_%year%.tif"
+        DATA "../database/biomass/drainage/%code%/AGB_%code%_%year%.tif"
 
         INCLUDE "includes/style_agb.map"
     END
