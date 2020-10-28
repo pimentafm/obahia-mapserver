@@ -29,7 +29,7 @@ MAP
     IMAGEPATH "/tmp/"
         IMAGEURL "/tmp/"
         METADATA
-            "wms_title" "Estações Fluviométricas"
+            "wms_title" "Estações Telemétricas"
             "wms_legend" "http://obahia.dea.ufv.br:8085"
             "wms_onlineresource" "http://obahia.dea.ufv.br:8085/cgi-bin/mapserv.fcgi?"
             "wms_enable_request" "*"
@@ -64,24 +64,20 @@ MAP
         TYPE POINT
         DUMP TRUE
 
+        TOLERANCE 10.0
+
         LABELITEM "code"
         LABELCACHE ON
         PROCESSING "LABEL_NO_CLIP=True"
 
-        VALIDATION
-            "code" "[0-9]+"
-        END
+        TEMPLATE "templates/dataCoordinate_stream.html"
 
         INCLUDE "includes/dbconfig.map"
 
-        DATA "geom FROM (
-          SELECT fluvio.id, fluvio.code, fluvio.geom AS geom
-          FROM
-            vector.estacoes_fluviometricas AS fluvio
-          WHERE  fluvio.code = '%code%') as subquery USING UNIQUE id USING SRID=4326"
+        DATA "geom from vector.estacoes_telemetricas"
 
-         PROCESSING "CLOSE_CONNECTION=DEFER"
+        PROCESSING "CLOSE_CONNECTION=DEFER"
 
-         INCLUDE "includes/style_estacoes.map"
+        INCLUDE "includes/style_estacoes_telemetricas.map"
     END
 END
