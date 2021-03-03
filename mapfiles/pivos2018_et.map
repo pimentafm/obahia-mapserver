@@ -56,7 +56,7 @@ MAP
         TYPE POLYGON
         DUMP TRUE
         CONNECTIONTYPE postgis
-        CONNECTION "host=localhost dbname=<dbname> user=<username> password=<password> port=<port>"
+        CONNECTION "host=localhost dbname=obahia user=geonode password=passwd port=5432"
         DATA "geom from vector.pivos2018_et using unique gid using srid=4326"
 
         VALIDATION

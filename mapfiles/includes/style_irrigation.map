@@ -1,0 +1,26 @@
+CLASSITEM "[pixel]"
+    CLASS
+        NAME "Irrigado"
+        EXPRESSION ( [pixel] == 1 )
+        STYLE
+            OPACITY 100
+            COLOR 1 101 19
+        END
+    END
+    CLASS
+        NAME "Não irrigado"
+        EXPRESSION ( [pixel] == 2 )
+        STYLE
+            OPACITY 100
+            COLOR 171 0 54
+        END
+    END
+    CLASS
+        NAME "Outros usos"
+        EXPRESSION ( [pixel] == 0 )
+        STYLE
+            OPACITY 0
+            COLOR 200 200 200
+        END
+    END
+END

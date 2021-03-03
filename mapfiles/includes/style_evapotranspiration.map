@@ -1,0 +1,10 @@
+CLASSITEM "[pixel]"
+    CLASS
+        NAME "> 0 - 200 mm/mo"
+        EXPRESSION ([pixel] >= 0 and [pixel] <= 200)
+        STYLE
+            COLORRANGE 253 231 37 253 126 37
+            DATARANGE 0 200
+        END
+    END
+END

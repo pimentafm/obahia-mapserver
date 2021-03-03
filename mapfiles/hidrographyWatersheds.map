@@ -57,7 +57,7 @@ MAP
 
         LABELITEM "name"
         LABELCACHE ON
-        PROCESSING "LABEL_NO_CLIP=True"
+        #PROCESSING "LABEL_NO_CLIP=True"
 
         VALIDATION
           "ws" "^[a-zA-Z\-]+$"
@@ -67,11 +67,9 @@ MAP
         INCLUDE "includes/dbconfig.map"
         DATA "geom FROM (
           SELECT
-          hidro.fid, hidro.name, ST_Intersection(gcc.geom, hidro.geom) AS geom
+          hidro.fid, hidro.name, hidro.gcc, hidro.geom
           FROM
-            vector.hidrography AS hidro, 
-            vector.gcc AS gcc
-          WHERE ST_Intersects(gcc.geom, hidro.geom) AND gcc.name = UPPER('%ws%')) as subquery USING UNIQUE fid USING SRID=4326"
+            vector.hidrography AS hidro WHERE hidro.gcc = '%ws%') as subquery USING UNIQUE fid USING SRID=4326"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 

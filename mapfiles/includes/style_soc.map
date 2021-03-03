@@ -1,6 +1,6 @@
 CLASSITEM "[pixel]"
     CLASS
-        NAME "0 - 20 tC ha<sup>-1</sup>"
+        NAME "0 - 20 Mg-C ha<sup>-1</sup>"
         EXPRESSION ([pixel] >= 0 and [pixel] <= 20)
         STYLE
             COLORRANGE 247 243 229 239 235 222
@@ -8,7 +8,7 @@ CLASSITEM "[pixel]"
         END
     END
     CLASS
-        NAME "> 20 - 40 tC ha<sup>-1</sup>"
+        NAME "> 20 - 40 Mg-C ha<sup>-1</sup>"
         EXPRESSION ([pixel] > 20 and [pixel] <= 40)
         STYLE
             COLORRANGE 239 235 222 216 187 144
@@ -16,7 +16,7 @@ CLASSITEM "[pixel]"
         END
     END
     CLASS
-        NAME "> 40 - 60 tC ha<sup>-1</sup>"
+        NAME "> 40 - 60 Mg-C ha<sup>-1</sup>"
         EXPRESSION ([pixel] > 40 and [pixel] <= 60)
         STYLE
             COLORRANGE 216 187 144 158 122 71
@@ -24,7 +24,7 @@ CLASSITEM "[pixel]"
         END
     END
     CLASS
-        NAME "> 60 - 80 tC ha<sup>-1</sup>"
+        NAME "> 60 - 80 Mg-C ha<sup>-1</sup>"
         EXPRESSION ([pixel] > 60 and [pixel] <= 80)
         STYLE
             COLORRANGE 158 122 71 84 59 26
@@ -32,7 +32,7 @@ CLASSITEM "[pixel]"
         END
     END
     CLASS
-        NAME "> 80 tC ha<sup>-1</sup>"
+        NAME "> 80 Mg-C ha<sup>-1</sup>"
         EXPRESSION ([pixel] > 80)
         STYLE
             COLORRANGE 84 59 26 0 0 0
