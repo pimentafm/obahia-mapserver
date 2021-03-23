@@ -1,0 +1,91 @@
+CLASSITEM "amount"
+    CLASS
+      NAME "0 - 4 mm"
+      EXPRESSION ( ([amount] >= 0) AND ([amount] <= 4) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#f7fbff"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "4 - 8 mm"
+      EXPRESSION ( ([amount] > 4) AND ([amount] <= 8) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#d8e7f5"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "8 - 12 mm"
+      EXPRESSION ( ([amount] > 8) AND ([amount] <= 12) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#b0d2e8"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "12 - 16 mm"
+      EXPRESSION ( ([amount] > 12) AND ([amount] <= 16) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#73b3d8"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "16 - 20 mm"
+      EXPRESSION ( ([amount] > 16) AND ([amount] <= 20) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#3e8ec4"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "20 - 24 mm"
+      EXPRESSION ( ([amount] > 20) AND ([amount] <= 24) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#1563aa"
+        ANTIALIAS TRUE
+      END
+    END
+
+    CLASS
+      NAME "> 24 mm"
+      EXPRESSION ( ([amount] >= 24) )
+      STYLE
+        OUTLINECOLOR "#000000"
+        ANTIALIAS TRUE
+      END
+      STYLE
+        COLOR "#08306b"
+        ANTIALIAS TRUE
+      END
+    END
