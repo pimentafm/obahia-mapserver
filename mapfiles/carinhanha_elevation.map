@@ -1,26 +1,23 @@
 MAP
-    CONFIG "CPL_DEBUG" "ON"
-    NAME "rodovias"
+    NAME "carinhanha"
     SIZE 450 650
     EXTENT -46.6330735347222216 -15.4471601311111115 -43.1301829158333305 -10.1812359355555557
 
-   #DEBUG 5
-   #:CONFIG "MS_ERRORFILE" "/tmp/ms_error.log"
+    FONTSET "fonts/fonts.list"
 
     OUTPUTFORMAT
       NAME "png8"
       DRIVER AGG/PNG8
       MIMETYPE "image/png; mode=8bit"
-      IMAGEMODE RGB
+      IMAGEMODE RGBA
       EXTENSION "png"
     END
 
-
     WEB
-    IMAGEPATH "/tmp/"
+        IMAGEPATH "/tmp/"
         IMAGEURL "/tmp/"
         METADATA
-            "wms_title" "Rodovias"
+            "wms_title" "Corrente"
             "wms_legend" "http://obahia.dea.ufv.br:8085"
             "wms_onlineresource" "http://obahia.dea.ufv.br:8085/cgi-bin/mapserv.fcgi?"
             "wms_enable_request" "*"
@@ -41,41 +38,33 @@ MAP
       KEYSPACING 6 6
       LABEL
         TYPE TRUETYPE
-      #  FONT 'Roboto'
+        FONT 'Roboto'
         SIZE 9
         COLOR 0 0 89
         OUTLINECOLOR 255 255 255
         ANTIALIAS false
       END
-      # TEMPLATE "landuseLegend.html"
+      TEMPLATE "templates/modflowLegend.html"
     END
 
     LAYER
-        NAME rodovias
+        NAME elevation
         STATUS DEFAULT
-        TYPE LINE
+        TYPE POLYGON
+        DUMP TRUE
 
-        LABELITEM "code"
-        LABELCACHE ON
-        PROCESSING "LABEL_NO_CLIP=True"
-
-        VALIDATION
-            "code" "^[0-9]*[1-9][0-9]*$"
-        END
-
+        TEMPLATE "templates/dataCoordinate_elevation.html"
 
         INCLUDE "includes/dbconfig.map"
         DATA "geom FROM (
           SELECT
-          h.id, h.code, ST_Intersection(counties.geom, h.geom) AS geom
+          carinhanha.node, carinhanha.elevation, carinhanha.geom
           FROM
-            vector.highways AS h,
-            vector.counties AS counties
-          WHERE ST_Intersects(counties.geom, h.geom) AND counties.code = %code%) as subquery USING UNIQUE id USING SRID=4326"
+            modflow.carinhanha AS carinhanha) as subquery USING UNIQUE node USING SRID=31986"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 
-        INCLUDE "includes/style_highways.map"
+        INCLUDE "includes/style_elevation.map"
     END
 END
 

@@ -59,8 +59,8 @@ MAP
         TEMPLATE "templates/dataCoordinate_biomass.html"
 
         VALIDATION
-	   "year" "[0-9]+"
-            "code" "[0-9]+"
+	   "year" "^[0-9]*[1-9][0-9]*$"
+           "code" "^[0-9]*[1-9][0-9]*$"
         END
 
         DATA "../database/biomass/drainage/%code%/AGB_%code%_%year%.tif"

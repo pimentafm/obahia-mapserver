@@ -60,7 +60,7 @@ MAP
         PROCESSING "LABEL_NO_CLIP=True"
 
         VALIDATION
-            "code" "[0-9]+"
+            "code" "^[0-9]*[1-9][0-9]*$"
         END
 
         INCLUDE "includes/dbconfig.map"

@@ -43,7 +43,7 @@ MAP
 
         VALIDATION
             "ws" "^[a-zA-Z\-]+$"
-	    "year" "[0-9]+"
+	    "year" "^[0-9]*[1-9][0-9]*$"
         END
 
         DATA "../database/landuse/gcc/%ws%/landuse%year%.tif"

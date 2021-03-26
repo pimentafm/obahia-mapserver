@@ -38,7 +38,7 @@ MAP
 
     LEGEND
         STATUS on
-        KEYSIZE 140 12
+        KEYSIZE 20 12
         KEYSPACING 6 6
 
         LABEL
@@ -58,11 +58,11 @@ MAP
         TYPE POLYGON
         DUMP TRUE
 
-        TEMPLATE "templates/dataCoordinate.html"
+        TEMPLATE "templates/dataCoordinate_amount.html"
         
         VALIDATION
-	        "year" "[0-9]+"
-		"month" "[0-9]+"
+	        "year" "^[0-9]*[1-9][0-9]*$"
+		"month" "^[0-9]*[1-9][0-9]*$"
         END
 
         INCLUDE "includes/dbconfig.map"

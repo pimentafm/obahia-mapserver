@@ -39,7 +39,7 @@ MAP
         DUMP TRUE
 
         VALIDATION
-            "code" "[0-9]+"
+            "code" "^[0-9]*[1-9][0-9]*$"
         END
 
         INCLUDE "includes/dbconfig.map"
@@ -65,9 +65,9 @@ MAP
         TEMPLATE "templates/dataCoordinate.html"
 
         VALIDATION
-	    "code" "[0-9]+"
-	    "year" "[0-9]+"
-	    "month" "[0-9]+"
+	    "code" "^[0-9]*[1-9][0-9]*$"
+	    "year" "^[0-9]*[1-9][0-9]*$"
+	    "month" "^[0-9]*[1-9][0-9]*$"
         END
 
         DATA "../database/irrigation/counties/irrigation_%code%_%year%_%month%.tif"
