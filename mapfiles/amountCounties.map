@@ -60,14 +60,15 @@ MAP
         STATUS DEFAULT
         TYPE POLYGON
         DUMP TRUE
-        TOLERANCE 0
+
+        TOLERANCE 80
 
         TEMPLATE "templates/dataCoordinate_amount.html"
 
         VALIDATION
-            "code" "^[0-9]*[1-9][0-9]*$"
+            "code" "^[0-9]*$"
             "year" "^[0-9]*[1-9][0-9]*$"
-            "month" "^[0-9]*[1-9][0-9]*$"
+            "month" "0[1-9]|1[0-2]"
         END
 
         INCLUDE "includes/dbconfig.map"
