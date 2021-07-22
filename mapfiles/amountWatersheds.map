@@ -68,7 +68,7 @@ MAP
 
         VALIDATION
             "ws" "^[a-zA-Z\-]+$"
-            "default_ws" "GRANDE"
+            "default_ws" "grande"
             "year" "^[0-9]*[1-9][0-9]*$"
             "month" "0[1-9]|1[0-2]"
         END
@@ -77,11 +77,9 @@ MAP
 
         DATA "geom FROM (
 	  SELECT
-          pivos.id, pivos.amount, pivos.geom
+            pivos.id, pivos.amount, pivos.geom
           FROM
-            vector.pivos_amount_%year%%month% AS pivos,
-            vector.gcc AS gcc
-          WHERE ST_Intersects(gcc.geom, pivos.geom) AND gcc.name = UPPER('%ws%')) as subquery USING UNIQUE id USING SRID=4326"
+            vector.pivos_%ws%_amount_%year%%month% AS pivos) as subquery USING UNIQUE id USING SRID=4326"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 

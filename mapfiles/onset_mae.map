@@ -1,5 +1,5 @@
 MAP
-    NAME "onset"
+    NAME "mae"
     SIZE 450 650
     EXTENT -46.6330735347222216 -15.4471601311111115 -43.1301829158333305 -10.1812359355555557
 
@@ -51,26 +51,20 @@ MAP
     END
 
     LAYER
-        NAME onset
+        NAME mae
         STATUS DEFAULT
-        TYPE POLYGON
+        TYPE RASTER
         DUMP TRUE
-        TOLERANCE 80
+        TOLERANCE 0
+        TOLERANCEUNITS pixels
         
-        TEMPLATE "templates/dataCoordinate_onset.html"
+        TEMPLATE "templates/dataCoordinate_onset_mae.html"
  
-        INCLUDE "includes/dbconfig.map"
-        DATA "geom from vector.onset_forecast"
+        DATA "../database/onset/onset_mae.tif"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 
-        INCLUDE "includes/style_onset_raster.map"
+#        INCLUDE "includes/style_onset_raster.map"
     END
 END
 
-#        DATA "geom from (
-#          SELECT
-#          onset_forecast.fid, onset_forecast.onset, onset_forecast.date, onset_forecast.mae_median, ST_Intersection(onset_forecast.geom, gcc.geom) AS geom
-#          FROM vector.onset_forecast, vector.gcc
-#          WHERE ST_Intersects(gcc.geom, onset_forecast.geom)
-#        ) AS subquery USING UNIQUE fid USING SRID=4326"

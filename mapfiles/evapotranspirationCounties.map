@@ -67,7 +67,7 @@ MAP
         VALIDATION
 	    "code" "^[0-9]*[1-9][0-9]*$"
 	    "year" "^[0-9]*[1-9][0-9]*$"
-	    "month" "^[0-9]*[1-9][0-9]*$"
+	    "month" "^[0]*[0-9][1-9]*$"
         END
 
         DATA "../database/evapotranspiration/counties/evapotranspiration_%code%_%year%_%month%.tif"

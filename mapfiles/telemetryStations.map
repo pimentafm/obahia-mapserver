@@ -1,10 +1,12 @@
 MAP
-    NAME "Evapotranspiration"
+    NAME "stations"
     SIZE 450 650
     EXTENT -46.6330735347222216 -15.4471601311111115 -43.1301829158333305 -10.1812359355555557
-     
+ 
+    FONTSET "fonts/fonts.list"
+
     DEBUG 5
-    CONFIG "MS_ERRORFILE" "/tmp/ms_error.txt"
+    CONFIG "MS_ERRORFILE" "/tmp/ms_error.log"
 
     FONTSET "fonts/fonts.list"
 
@@ -16,11 +18,20 @@ MAP
         EXTENSION "png"
     END
 
+    SYMBOL
+      NAME "circlef"
+      TYPE ellipse
+      FILLED true
+      POINTS
+        10 10
+      END
+    END
+
     WEB
         IMAGEPATH "/tmp/"
-	    IMAGEURL "/tmp/"
+            IMAGEURL "/tmp/"
         METADATA
-            "wms_title" "evapotranspiration"
+            "wms_title" "landuse"
             "wms_legend" "http://obahia.dea.ufv.br:8085"
             "wms_feature_info_mime_type" "text/html"
             "wms_server_version"  "1.3.0"
@@ -38,9 +49,8 @@ MAP
 
     LEGEND
         STATUS on
-        KEYSIZE 140 12
-        KEYSPACING 6 6
-
+        KEYSIZE 22 22
+        KEYSPACING 8 8 
         LABEL
             TYPE TRUETYPE
             FONT 'Roboto'
@@ -49,25 +59,33 @@ MAP
             OUTLINECOLOR 255 255 255
             ANTIALIAS true
         END
-        TEMPLATE "templates/evapotranspirationLegend.html"
+        TEMPLATE "templates/landuseLegend.html"
     END
 
     LAYER
-        NAME "evapotranspiration"
+        NAME stations
         STATUS DEFAULT
-        TYPE RASTER
+        TYPE POINT
         DUMP TRUE
-        TOLERANCE 0
 
-        TEMPLATE "templates/dataCoordinate.html"
+        TOLERANCE 10.0
 
-        VALIDATION
-	        "year" "^[0-9]*[1-9][0-9]*$"
-		"month" "^[0]*[0-9][1-9]*$"
-        END
+        LABELITEM "code"
+        LABELCACHE ON
+        PROCESSING "LABEL_NO_CLIP=True"
 
-        DATA "../database/evapotranspiration/region/evapotranspiration_%year%_%month%.tif"
+        TEMPLATE "templates/dataCoordinate_telemetry_stations.html"
 
-        INCLUDE "includes/style_evapotranspiration.map"
+        INCLUDE "includes/dbconfig.map"
+
+          DATA "geom FROM (
+          SELECT
+          est.code, est.forecast, est.location, est.qsup, est.isforecast, est.status, est.geom as geom
+          FROM
+            vector.estacoes_telemetricas AS est) as subquery USING UNIQUE code USING SRID=4326"
+
+        PROCESSING "CLOSE_CONNECTION=DEFER"
+
+        INCLUDE "includes/style_telemetry_stations.map"
     END
 END

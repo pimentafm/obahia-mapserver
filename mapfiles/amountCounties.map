@@ -77,9 +77,8 @@ MAP
           SELECT
             pivos.id, pivos.amount, pivos.geom
           FROM
-            vector.pivos_amount_%year%%month% AS pivos,
-            vector.counties AS counties
-          WHERE ST_Intersects(counties.geom, pivos.geom) AND counties.code = %code%) as subquery USING UNIQUE id USING SRID=4326"
+            vector.pivos_%code%_amount_%year%%month% AS pivos
+          ) as subquery USING UNIQUE id USING SRID=4326"
 
         PROCESSING "CLOSE_CONNECTION=DEFER"
 

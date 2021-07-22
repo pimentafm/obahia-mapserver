@@ -73,7 +73,7 @@ MAP
         END
 
         INCLUDE "includes/dbconfig.map"
-
+       
         DATA "geom FROM (
           SELECT fluvio.id, fluvio.code, fluvio.geom AS geom
           FROM

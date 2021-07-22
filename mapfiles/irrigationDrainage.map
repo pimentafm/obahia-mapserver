@@ -67,10 +67,10 @@ MAP
         VALIDATION
 	    "code" "^[0-9]*[1-9][0-9]*$"
 	    "year" "^[0-9]*[1-9][0-9]*$"
-	    "month" "^[0-9]*[1-9][0-9]*$"
+	    "month" "^[0]*[0-9][1-9]*$"
         END
 
-        DATA "../database/irrigation/drainage/%code%/irrigation_%code%_%year%_%month%.tif"
+        DATA "../database/irrigation/drainage/irrigation_%code%_%year%_%month%.tif"
 
         INCLUDE "includes/style_irrigation.map"
     END

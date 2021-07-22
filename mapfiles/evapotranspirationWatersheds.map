@@ -68,7 +68,7 @@ MAP
         VALIDATION
             "ws" "^[a-zA-Z\-]+$"
 	    "year" "^[0-9]*[1-9][0-9]*$"
-	    "month" "^[0-9]*[1-9][0-9]*$"
+	    "month" "^[0]*[0-9][1-9]*$"
         END
 
         DATA "../database/evapotranspiration/gcc/%ws%/evapotranspiration_%year%_%month%.tif"
