@@ -1,0 +1,58 @@
+CLASSITEM "isforecast"
+  CLASS
+    NAME "Com previsão"
+    LABEL
+      COLOR 0 0 0
+      FONT Roboto
+      ANTIALIAS TRUE
+      TYPE TRUETYPE
+      #ANGLE FOLLOW
+      POSITION AUTO
+      FORCE TRUE
+      PARTIALS FALSE
+      SIZE 10
+      OUTLINECOLOR 255 255 255
+    END
+   EXPRESSION "yes"
+   STYLE
+     SYMBOL "circlef"
+     WIDTH 1
+     OUTLINECOLOR 0 0 0
+     COLOR 135 206 250
+     SIZE 20
+   END
+   STYLE
+     SYMBOL "circlef"
+     COLOR 0 0 0
+     SIZE 10
+   END
+ END
+  CLASS
+    NAME "Sem previsão"
+    LABEL
+      COLOR 0 0 0
+      FONT Roboto
+      ANTIALIAS TRUE
+      TYPE TRUETYPE
+      #ANGLE FOLLOW
+      POSITION AUTO
+      FORCE TRUE
+      PARTIALS FALSE
+      SIZE 10
+      OUTLINECOLOR 255 255 255
+    END
+   EXPRESSION "no"
+   STYLE
+     SYMBOL "circlef"
+     WIDTH 1
+     OUTLINECOLOR 0 0 0
+     COLOR 200 200 200
+     SIZE 20
+   END
+   STYLE
+     SYMBOL "circlef"
+     COLOR 0 0 0
+     SIZE 10
+   END
+ END
+END

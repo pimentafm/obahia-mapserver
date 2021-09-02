@@ -1,91 +1,98 @@
 CLASSITEM "amount"
     CLASS
-      NAME "0 - 4 mm"
-      EXPRESSION ( ([amount] >= 0) AND ([amount] <= 4) )
+      NAME "0 - 20 mm/mo"
+      EXPRESSION ( ([amount] >= 0) AND ([amount] <= 20) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#f7fbff"
+        COLOR "#7BD4F4"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "4 - 8 mm"
-      EXPRESSION ( ([amount] > 4) AND ([amount] <= 8) )
+      NAME "20 - 40 mm/mo"
+      EXPRESSION ( ([amount] > 20) AND ([amount] <= 40) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#d8e7f5"
+        COLOR "#54C7F3"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "8 - 12 mm"
-      EXPRESSION ( ([amount] > 8) AND ([amount] <= 12) )
+      NAME "40 - 60 mm/mo"
+      EXPRESSION ( ([amount] > 40) AND ([amount] <= 60) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#b0d2e8"
+        COLOR "#30ACE2"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "12 - 16 mm"
-      EXPRESSION ( ([amount] > 12) AND ([amount] <= 16) )
+      NAME "60 - 80 mm/mo"
+      EXPRESSION ( ([amount] > 60) AND ([amount] <= 80) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#73b3d8"
+        COLOR "#1F6FB8"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "16 - 20 mm"
-      EXPRESSION ( ([amount] > 16) AND ([amount] <= 20) )
+      NAME "80 - 100 mm/mo"
+      EXPRESSION ( ([amount] > 80) AND ([amount] <= 100) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#3e8ec4"
+        COLOR "#0F599A"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "20 - 24 mm"
-      EXPRESSION ( ([amount] > 20) AND ([amount] <= 24) )
+      NAME "100 - 120 mm/mo"
+      EXPRESSION ( ([amount] > 100) AND ([amount] <= 120) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#1563aa"
+        COLOR "#084466"
         ANTIALIAS TRUE
       END
     END
 
     CLASS
-      NAME "> 24 mm"
-      EXPRESSION ( ([amount] >= 24) )
+      NAME "> 120 mm/mo"
+      EXPRESSION ( ([amount] >= 120) )
       STYLE
+        OPACITY 0
         OUTLINECOLOR "#000000"
         ANTIALIAS TRUE
       END
       STYLE
-        COLOR "#08306b"
+        COLOR "#0C3457"
         ANTIALIAS TRUE
       END
     END

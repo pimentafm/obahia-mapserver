@@ -1,0 +1,59 @@
+CLASSITEM "[pixel]"
+    CLASS
+        NAME "< 30/09"
+        EXPRESSION ( [pixel] <= 91 )
+        STYLE
+            COLOR "#31007e"
+        END
+    END
+    CLASS
+        NAME "> 30/09 - 15/10"
+        EXPRESSION ( [pixel] > 91 AND [pixel] <= 106 )
+        STYLE
+            COLOR "#0000ff"
+        END
+    END
+    CLASS
+        NAME "> 15/10 - 30/10"
+        EXPRESSION ( [pixel] > 106 AND [pixel] <= 121 )
+        STYLE
+            COLOR "#17d78b"
+        END
+    END
+    CLASS
+        NAME "> 30/10 - 15/11"
+        EXPRESSION ( [pixel] > 121 AND [pixel] <= 137 )
+        STYLE
+            COLOR "#2ac82a"
+        END
+    END
+    CLASS
+        NAME "> 15/11 - 30/11"
+        EXPRESSION ( [pixel] > 137 AND [pixel] <= 152 )
+        STYLE
+            COLOR "#9fff00"
+        END
+    END
+    CLASS
+        NAME "> 30/11 - 15/12"
+        EXPRESSION ( [pixel] > 152 AND [pixel] <= 167 )
+        STYLE
+            COLOR "#ff9800"
+        END
+    END
+    CLASS
+        NAME "> 15/12 - 30/12"
+        EXPRESSION ( [pixel] > 167 AND [pixel] <= 182 )
+        STYLE
+            COLOR "#ff0000"
+        END
+    END
+    CLASS
+        NAME "> 30/12"
+        EXPRESSION ( [pixel] > 182 AND [pixel] <= 500 )
+        STYLE
+            COLOR "#ff5eb1"
+        END
+    END
+END
+

@@ -15,12 +15,12 @@ CLASSITEM "[pixel]"
             COLOR 171 0 54
         END
     END
-    CLASS
-        NAME "Outros usos"
-        EXPRESSION ( [pixel] == 0 )
-        STYLE
-            OPACITY 0
-            COLOR 200 200 200
-        END
-    END
+#    CLASS
+#        NAME "Outros usos"
+#        EXPRESSION ( [pixel] == 0 )
+#        STYLE
+#            OPACITY 0
+#            COLOR 200 200 200
+#        END
+#    END
 END
